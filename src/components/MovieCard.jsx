@@ -1,13 +1,18 @@
 import React from 'react';
+import { useWatchlist } from '../context/WatchlistContext';
 
 // ({movie}) => this is destructuring in the parameter itself to easy access
-export default function MovieCard({movie}) {
-    return(
+export default function MovieCard({ movie }) {
+
+    // Import useWatchlist Hook
+    const {addToWatchlist} = useWatchlist();
+
+    return (
         <div className="col-md-4 movie-card">
             <h3>{movie.Title}</h3>
             <p>{movie.Year}</p>
             <img src={movie.Poster} alt={`${movie.Title} Poster`} />
-
+            <button onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
         </div>
     )
 }

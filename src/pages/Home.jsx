@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import MovieCard from '../components/MovieCard';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     // Create the variables for useState
@@ -39,7 +40,7 @@ export default function Home() {
                     />
                     <button className='btn btn-primary btn-block mt-2' onClick={fetchMovies}>Search</button>
                 </div>
-
+                <Link to='/watchlist'>Watchlist</Link>
             </div>
             <div className='row mt-4'>
                 {
