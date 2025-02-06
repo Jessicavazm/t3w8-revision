@@ -27,17 +27,21 @@ export default function Home() {
 
 
     return (
-        <div>
-            <h1>Movie Search</h1>
-            <input
-                type='text'
-                placeholder='Search for Movies...'
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-            />
-            <button onClick={fetchMovies}>Search</button>
+        <div className='container my-4'>
+            <h1 className='text-center mb-4'>Movie Search</h1>
+            <div className='row'>
+                <div className='col-md-8 offset-md-2'>
+                    <input
+                        type='text'
+                        placeholder='Search for Movies...'
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+                    <button className='btn btn-primary btn-block mt-2' onClick={fetchMovies}>Search</button>
+                </div>
 
-            <div>
+            </div>
+            <div className='row mt-4'>
                 {
                     movies.map((movie) => (
                         <MovieCard key={movie.imdbID} movie={movie} />
