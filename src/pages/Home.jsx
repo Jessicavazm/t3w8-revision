@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import MovieCard from '../components/MovieCard';
 
 export default function Home() {
     // Create the variables for useState
@@ -19,6 +20,7 @@ export default function Home() {
                 }
             });
             console.log(response.data)
+            // this function updates the movies state
             setMovies(response.data.Search || []);
         }
     };
@@ -38,13 +40,10 @@ export default function Home() {
             <div>
                 {
                     movies.map((movie) => (
-                        <div key={movie.imdbID}>
-                            <h3>{movie.Title}</h3>
-                            <p>{movie.Year}</p>
-                        </div>
+                        <MovieCard key={movie.imdbID} movie={movie} />
                     ))
                 }
             </div>
         </div>
-    )
+    );
 }
