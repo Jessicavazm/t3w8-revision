@@ -41,3 +41,6 @@ Learning Objectives:
 - Start creating the Home page, create a function that returns one HTML component, usually div or fragment.
 - Define routes in the App.jsx file to be able to see your application
 
+
+## Styling
+- When styling try to go with relative units as much as you can because this unit is great for making your website dynamic.

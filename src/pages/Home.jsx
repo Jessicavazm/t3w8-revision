@@ -40,7 +40,6 @@ export default function Home() {
                     />
                     <button className='btn btn-primary btn-block mt-2' onClick={fetchMovies}>Search</button>
                 </div>
-                <Link to='/watchlist'>Watchlist</Link>
             </div>
             <div className='row mt-4'>
                 {

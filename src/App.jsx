@@ -7,12 +7,14 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import WatchlistProvider from './context/WatchlistContext';
 import Watchlist from './pages/Watchlist';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <WatchlistProvider>
       <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/watchlist' element={<Watchlist />} />
