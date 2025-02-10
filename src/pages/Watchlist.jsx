@@ -1,12 +1,15 @@
 import React from 'react';
 import { useWatchlist } from '../context/WatchlistContext';
+import { useNavigate } from 'react-router-dom';
 
 const Watchlist = () => {
     // Fetch two out of three returns from the custom hook
     const { watchlist, removeFromWatchlist } = useWatchlist();
-
+    const navigate = useNavigate();
+    
     return (
         <div>
+            <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>Go Back</button>
             <h2>Your Watchlist</h2>
             {watchlist.length === 0 ? (
                 <p>Your watchlist is empty. Start adding some movies!</p>
