@@ -41,6 +41,10 @@ Learning Objectives:
 - Start creating the Home page, create a function that returns one HTML component, usually div or fragment.
 - Define routes in the App.jsx file to be able to see your application
 
+### Steps
+- 1 Step: If it's generalised and meant to be used in different components and pages: create a context. Define state variables and functionalities.
+- Create a component or page depending on the use case, make sure you import it.
+- If you defined a context, import the 'provider' as well towards the top.
+- When you have the components, wherever you want to use them, you need to import them there.
 
-## Styling
-- When styling try to go with relative units as much as you can because this unit is great for making your website dynamic.
+

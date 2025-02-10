@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { useNotification } from './NotificationContext';
 
 // Create an instance of Context
 const WatchlistContext = createContext();
@@ -7,14 +8,18 @@ const WatchlistContext = createContext();
 export default function WatchlistProvider({ children }) {
     // Define state variables
     const [watchlist, setWatchlist] = useState([]);
+    const {showNotification} = useNotification();
 
     // Define different functions
     const addToWatchlist = (movie) => {
         setWatchlist((prev) => [...prev, movie]);
+        showNotification(`${movie.Title} added to watchlist!`);
     };
 
-    const removeFromWatchlist = (id) => {
-        setWatchlist((prev) => prev.filter((movie) => movie.id != id))
+    const removeFromWatchlist = (imdbID) => {
+        setWatchlist((prev) => prev.filter((movie) => movie.imdbID != imdbID));
+        showNotification('Movie removed from watchlist.');
+
     };
 
     return (
