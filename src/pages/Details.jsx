@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Details() {
     // useParams hook that fetches the parameter value from URL
     const { id } = useParams();
+    const navigate = useNavigate();
     // Store parameter value in the state to use it in the future
     const [movieDetails, setMovieDetails] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -41,12 +42,14 @@ export default function Details() {
 
     return (
         // Make sure you start with div
-        <div>
+        <div className="container mt-4">
+            <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>Go Back</button>
             <h2>{movieDetails.Title}</h2>
             <p>{movieDetails.Year}</p>
-            <img src={movieDetails.Poster}
+            <img src={movieDetails.Poster.replace('SX300', 'SX700')}
                 alt={`${movieDetails.Title} Poster`}
-                className='card-img-top' />
+                className='card-img-top' 
+                style={{width: '300px'}}/>
             <p><strong>Genre: </strong>{movieDetails.Genre}</p>
             <p><strong>Plot: </strong>{movieDetails.Plot}</p>
             <p><strong>Actors: </strong>{movieDetails.Actors}</p>
