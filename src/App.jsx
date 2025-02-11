@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import WatchlistProvider from './context/WatchlistContext';
 import Watchlist from './pages/Watchlist';
 import Navbar from './components/Navbar';
-import Details from './pages/details';
+import Details from './pages/Details';
 import NotificationProvider from './context/NotificationContext';
 import NotificationBar from './components/NotificationBar';
 
