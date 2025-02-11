@@ -12,7 +12,7 @@ export default function MovieCard({ movie }) {
     const isInWatchlist = watchlist.some((item) => item.imdbID === movie.imdbID);
 
     return (
-        <div className="col-md-4 movie-card" style={{ maxWidth: '18 rem' }}>
+        <div className="col-md-4 movie-card" style={{ maxWidth: '18rem' }}>
             <h3>{movie.Title}</h3>
             <p>{movie.Year}</p>
             <img src={movie.Poster}
