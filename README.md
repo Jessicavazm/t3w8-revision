@@ -25,7 +25,9 @@ Learning Objectives:
 - Added "Go Back" navigation
 - Disable "Add to Watchlist" after adding it
 - Work on Notification Context, Component
-- Note: Make sure you create a .env file in the root directory and provide your unique API KEY.
+
+
+### Note: Make sure you create a .env file in the root directory and provide your unique API KEY.
 
 
 ## Steps

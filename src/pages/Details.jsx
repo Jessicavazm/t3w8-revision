@@ -11,9 +11,10 @@ export default function Details() {
 
     // Make a request to the API
     useEffect(() => {
+        apikey=import.meta.env.VITE_API_KEY
         const fetchMovieDetails = async () => {
             try {
-                const response = await fetch(`https://www.omdbapi.com/?apikey=a563e4cf&i=${id}`);
+                const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}=${id}`);
                 const data = await response.json();
 
                 if (data.Response == 'True') {
