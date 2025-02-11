@@ -4,7 +4,7 @@
 // import './App.css'
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Home from './pages/home';
+import Home from './pages/Home';
 import WatchlistProvider from './context/WatchlistContext';
 import Watchlist from './pages/Watchlist';
 import Navbar from './components/Navbar';

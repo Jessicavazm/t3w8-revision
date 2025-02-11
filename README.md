@@ -48,5 +48,5 @@ Learning Objectives:
 - Create a component or page depending on the use case, make sure you import it.
 - If you defined a context, import the 'provider' as well towards the top.
 - When you have the components, wherever you want to use them, you need to import them there.
-
+- Before deployment, you have to ensure you built it first with 'npm run build'.
 
